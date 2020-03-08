@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  section.form
+    h1 WEATHER APP
+    form.weather_form(action='/' method='post')
+      input(type='text' name='city' placeholder='City Name')
+      button Find
+    h6= weather
+    h5= notFound
+
+
