@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser')
 var router = require('./routes/router');
 // var usersRouter = require('./routes/users');
 var app = express();
+const port = process.env.PORT || 3000;
 
 app.use(cookieParser())
     // view engine setup
@@ -37,8 +38,7 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-app.listen(3000, () => {
-    console.log(`Server now running on...  http://127.0.0.1:3000/`);
+app.listen(port, () => {
+    console.log(`Server now running on...  http://127.0.0.1:${port}/`);
 })
 module.exports = app;
-console.log("HEy")
